@@ -9,7 +9,8 @@ Defines the interfaces used by other projects. By interfaces we mean service int
 - ### ApiDemo.Services
 Business logic of the services. Implements the interfaces from ApiDemo.Contract. There is no hosting, only service classes.
 - ### ApiDemo.Wcf
-WCF hosting project of the contracts from ApiDemo.Contract. Acts as plain facade of the services from ApiDemo.Services. No business logic here. All the bindings are declared in the web.config for the same contract. Currently REST, SOAP and named pipes. More can be added.
+WCF hosting project of the contracts from ApiDemo.Contract. Acts as plain facade of the services from ApiDemo.Services. No business logic here. Multiple bindings are declared in the web.config for the same contract. Currently REST, SOAP and named pipes. More can be added.
+Binding can be commented in or out in order to enable them or disable. netTcpBinding might colide with other ones.
 - ### ApiDemo.Client.NET48
 Typical WCF consumer client. No generated proxy classes from WSDL. All bindings are based on the configuration (URL, binding type), contract from the shared project ApiDemo.Contract. Client classes are implementations of the shared interface and ClientBase<shared interface>. This is the traditional and "proper" way to go when creating clients for WCFservices programmatically.
 - ### ApiDemo.Client.net8
@@ -17,7 +18,7 @@ Client in .net 8. In .net 8 and .net Core, there is no WCF. We can use gRPC for 
 Currently named pipes binding is not working (probably not implemented) as well as well net.TCP binding (but this is probably just configuration issue)
 
 ## How to run and test?
-- Run the WCF project to get the WCF host running
-- From another VS or from console run the clients .NET48 or .net8 to see them connect.
+- Run the WCF project to get the WCF host running. Comment in or out the bindings which should be tested.
+- From another VS or from console run the clients .NET48 or .net8 to see them connect. Again, turn on or off binding in the app.config
 - To test WCS REST binding: comment-in [WebGet line inside ApiDemo.Wcf.TestService, the you can connect to the URL via browser "GET".
 - Any other means such as PostMan
