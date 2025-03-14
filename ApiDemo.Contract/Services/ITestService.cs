@@ -8,7 +8,7 @@ namespace ApiDemo.Contract.Services
     public interface ITestService
     {
         [OperationContract]
-        string GetMessage(string name);
+        string GetMessage(string input);
 
         [OperationContract]
         SaveMessageResponse SaveMessage(SaveMessageRequest request);

@@ -6,9 +6,4 @@
         public int SourceId { get; set; }
     }
 
-    public class SaveMessageResponse
-    {
-        public int ResultSet { get; set; }
-    }
-
 }

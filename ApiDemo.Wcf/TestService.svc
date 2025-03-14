@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Service="ApiDemo.Wcf.TestService" Factory="Castle.Facilities.WcfIntegration.DefaultServiceHostFactory" %>

@@ -1,0 +1,2 @@
+﻿This is test console application in .NET Framework 4.8 that allows testing of connection to ITestService hosted in the Wcf project using 3 bindings, SOAP, named pipe and REST. 
+For the REST, please note that inside ApiDemo.Wcf.TestService the WebGet is commented out. When added the default WCF bindig will not work anymore, but GET will be available through browser GET

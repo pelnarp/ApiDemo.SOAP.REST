@@ -1,0 +1,1 @@
+﻿This project contains .NET Standard definitions of the service contracts. This is then used by the implementation of the BLL (Service project), hosting and consuming client
